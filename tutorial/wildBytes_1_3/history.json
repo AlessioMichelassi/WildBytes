@@ -1,0 +1,26 @@
+[
+    {
+        "role": "user",
+        "content": "Ciao chat sono K!"
+    },
+    {
+        "role": "assistant",
+        "content": "Ciao K! Come posso aiutarti oggi?"
+    },
+    {
+        "role": "user",
+        "content": "Ciao chat come mi chiamo?"
+    },
+    {
+        "role": "assistant",
+        "content": "Mi dispiace, ma non posso sapere il tuo nome a meno che tu non me lo dica."
+    },
+    {
+        "role": "user",
+        "content": "come mi chiamo?"
+    },
+    {
+        "role": "assistant",
+        "content": "Ti chiami K!"
+    }
+]
