@@ -4,7 +4,7 @@ Copyright (c) [2023] [Alessio Michelassi]
 
 Con la presente viene concesso, gratuitamente, a chiunque ottenga una copia
 di questo software e dei file di documentazione associati (il "Software"), di trattare
-il Software senza restrizioni, incluse, senza limitazione, i diritti
+il Software senza restrizioni, senza limitazione i diritti
 di utilizzo, copia, modifica, unione, pubblicazione, distribuzione, sottolicenza e/o vendita
 di copie del Software, e di consentire alle persone a cui il Software è
 fornito di farlo con le seguenti condizioni:
