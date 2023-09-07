@@ -9,8 +9,12 @@ Prerequisiti:
 Riflessioni:
 
     Analisi dell'impatto storico delle innovazioni tecnologiche.
-    Discussione sull'effetto del marketing sulle invenzioni.
-    Esplorazione dell'Equilibrio di Nash e l'approccio aziendale orientato al bene comune.
+    Python semplicemente python.
+    Come monitorare un budget e rimanere entra la soglia.
+    Come creare un sistema ci chatbot con un modello di linguaggio.
+    Dare una memoria al nostro chatBot.
+    Costruire una domanda con un contesto.
+    Usare le funzioni di OpenAI per ottenere una risposta.
 
 Cos'è ChatGPT?
 
@@ -35,6 +39,12 @@ Informazioni addizionali:
     L'uso delle API e del codice è Open Source con licenza MIT.
 
 Richiesta: Se ti piace questo contenuto, metti un like e iscriviti al canale. Grazie!
+
+Supporta WildBytes
+
+Se ti piace il contenuto e desideri supportare ulteriormente il canale, puoi considerare di fare una donazione tramite PayPal. Questo ci aiuterà a mantenere il canale attivo e a produrre contenuti di alta qualità in futuro.
+
+[![PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/alessiomichelassi)
 
 []: # Path: tutorial/readMe.md
 
