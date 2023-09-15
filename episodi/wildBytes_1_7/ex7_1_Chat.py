@@ -194,19 +194,22 @@ class Chat:
         fileName = input("Inserisci il nome del file: ")
         findFile = self.commonFunctions.findFile(f"{fileName}_PROMPT.json", os.getcwd())
         if findFile:
-            jSonDictionary = self.commonFunctions.read(f"{findFile}")
-            dictionary = json.loads(jSonDictionary)
-            self.memories = dictionary["MEMORY"]
-            self.directives = dictionary["DIRECTIVE"]
-            self.contexts = dictionary["CONTEXT"]
-            self.examples = dictionary["EXAMPLE"]
-            self.isMemoryMode = True
-            self.isDirectiveMode = True
-            self.isContextMode = True
-            self.isExampleMode = True
-            print("Prompt caricato correttamente.")
+            self.deserializePrompt(findFile)
         else:
             print("Il file non esiste.")
+
+    def deserializePrompt(self, findFile):
+        jSonDictionary = self.commonFunctions.read(f"{findFile}")
+        dictionary = json.loads(jSonDictionary)
+        self.memories = dictionary["MEMORY"]
+        self.directives = dictionary["DIRECTIVE"]
+        self.contexts = dictionary["CONTEXT"]
+        self.examples = dictionary["EXAMPLE"]
+        self.isMemoryMode = True
+        self.isDirectiveMode = True
+        self.isContextMode = True
+        self.isExampleMode = True
+        print("Prompt caricato correttamente.")
 
     def savePrompt(self):
         dictionary = {"MEMORY": self.memories, "DIRECTIVE": self.directives, "CONTEXT": self.contexts,
