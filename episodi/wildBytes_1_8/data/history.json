@@ -1,0 +1,10 @@
+[
+    {
+        "role": "user",
+        "content": "\n        \n    QUESTION: prompt load\n    ASSISTANT ANSWER:"
+    },
+    {
+        "role": "assistant",
+        "content": "I'm sorry, but I don't understand what you mean by \"prompt load\". Can you please provide more information or clarify your question?"
+    }
+]
