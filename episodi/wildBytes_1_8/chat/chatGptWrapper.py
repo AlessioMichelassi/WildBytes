@@ -22,7 +22,7 @@ class ChatGptAPIWrapper:
     _max_tokens = 50
 
     def __init__(self, parent):
-        openai.api_key = secretKeys.openAi
+        self._AI = openai.api_key = secretKeys.openAi
         self.commonFunctions = CommonFunctions()
         self.initVariables()
         self.initHistory()
@@ -98,6 +98,11 @@ class ChatGptAPIWrapper:
     def getModel(self):
         return self._model
 
+    @staticmethod
+    def geModelList():
+        data = openai.Model.list()
+        return [model["id"] for model in data["data"]]
+
     def setModel(self, value):
         self._model = value
 
@@ -162,14 +167,20 @@ class ChatGptAPIWrapper:
     #                   CHAT GPT FUNCTIONS
 
     def getResponse(self, messages):
-        return openai.ChatCompletion.create(
-            model=self.getModel(),
-            messages=messages,
-            max_tokens=self.getMaxTokens(),  # limita la lunghezza della risposta
-            temperature=self.getTemperature(),  # 0 = risposta più probabile, 1 = risposta più creativa
-            functions=self.functionManager.functions,
-            function_call="auto",
-        )
+        try:
+            return openai.ChatCompletion.create(
+                model=self.getModel(),
+                messages=messages,
+                max_tokens=self.getMaxTokens(),  # limita la lunghezza della risposta
+                temperature=self.getTemperature(),  # 0 = risposta più probabile, 1 = risposta più creativa
+                functions=self.functionManager.functions,
+                function_call="auto",
+            )
+        except Exception as e:
+            if "Too many tokens" in str(e):
+                return self.getResponse(messages)
+            else:
+                return f"Errore: {e}"
 
     def getAnswer(self, question):
         """

@@ -14,10 +14,14 @@ class CommandHandler:
             self.chat.addExample(command)
         elif "reset" in command:
             self.chat.list_manager.reset()
-        elif "mode" in command:
-            self.chat.changeMode()
         elif "prompt" in command:
             self.chat.prompt_manager.checkPrompt(command)
+        elif "print" in command:
+            self.chat.printParameters(command)
+        elif "set" in command:
+            self.chat.setParameters(command)
+        elif "help" in command:
+            print(self.createHelpStringCommand())
 
     def templateCommandParser(self, lst, command_keyword, activation_variable, command):
         """
@@ -68,6 +72,22 @@ class CommandHandler:
                     - #reset
                     - #exit
                     """)
+
+    @staticmethod
+    def createHelpStringCommand():
+        return ("""
+                Comandi disponibili:
+                - #memorize (clear, change, del, print, help)
+                - #directive (clear, change, del, print, help)
+                - #context (clear, change, del, print, help)
+                - #example (clear, change, del, print, help)
+                - #reset
+                - #prompt (clear, change, del, print, help)
+                - #set (temperature, max_tokens, model, standard)
+                - #print (temperature, max_tokens, model, standard)
+                - #exit
+                - #help
+                """)
 
     def enableAttribute(self, command_keyword, activation_variable):
         check = input(f"Vuoi attivare la modalità {command_keyword}? [y/n] ")

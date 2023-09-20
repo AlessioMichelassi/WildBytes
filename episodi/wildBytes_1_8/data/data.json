@@ -1,6 +1,6 @@
 {
-    "promptTokens": 68,
-    "completionTokens": 29,
-    "totalTokens": 97,
-    "budget": 0.049806
+    "promptTokens": 137,
+    "completionTokens": 50,
+    "totalTokens": 187,
+    "budget": 0.049432000000000004
 }
